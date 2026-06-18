@@ -327,36 +327,6 @@
             `;
         };
 
-        const getMatrixHTML = () => `
-            <div class="mb-3 flex flex-col gap-2">
-                <div class="flex gap-3">
-                    <div class="flex-1 border-2 border-black rounded p-2 bg-gray-50 print-bg-white flex items-center justify-between">
-                        <div>
-                            <div class="text-xs font-black uppercase tracking-widest text-black">🐺 The Pack / She-Wolves (Forwards)</div>
-                            <div class="text-[10px] text-gray-600 print-text-black font-medium mt-0.5">Contact Dominance & Work Capacity</div>
-                        </div>
-                        <div class="text-right">
-                            <div class="text-xs font-black text-[#D00000] print-text-black bg-red-100 print-bg-white px-2 py-0.5 rounded shadow-sm inline-block border border-red-200 print-border-black">3-5 Sets &times; 5-8 Reps</div>
-                            <div class="text-[9px] font-bold text-gray-600 print-text-black mt-1">60-90s Rest (Keep HR Up)</div>
-                        </div>
-                    </div>
-                    <div class="flex-1 border-2 border-black rounded p-2 bg-gray-50 print-bg-white flex items-center justify-between">
-                        <div>
-                            <div class="text-xs font-black uppercase tracking-widest text-black">⚡ The Alphas / Apex Wolves (Backs)</div>
-                            <div class="text-[10px] text-gray-600 print-text-black font-medium mt-0.5">Speed Merchants & Max Force</div>
-                        </div>
-                        <div class="text-right">
-                            <div class="text-xs font-black text-blue-700 print-text-black bg-blue-100 print-bg-white px-2 py-0.5 rounded shadow-sm inline-block border border-blue-200 print-border-black">4-5 Sets &times; 3-5 Reps</div>
-                            <div class="text-[9px] font-bold text-gray-600 print-text-black mt-1">3-5 Mins Rest (CNS Recovery)</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="text-[10px] font-bold text-[#D00000] print-text-black bg-red-50 print-bg-white p-1 border border-red-100 print-border-black rounded inline-block text-center">
-                    *COACH NOTE: Heavy Concentric Lifts (Deadlifts/Presses) are locked at 3x2 reps for BOTH cohorts to leverage the uninhibited nervous system post-isometrics.
-                </div>
-            </div>
-        `;
-
         const getTableHTML = (exercises) => {
             const rows = exercises.map((ex, idx) => `
                 <tr class="${idx % 2 === 0 ? 'bg-white print-bg-white' : 'bg-gray-50 print-bg-white'} border-b border-gray-200 print-border-black">
@@ -488,8 +458,6 @@
                         </div>
                         <p class="text-gray-700 print-text-black font-bold text-[11px] mb-3 italic">${data.subtitle}</p>
 
-                        ${data.showMatrix ? getMatrixHTML() : ''}
-                        
                         ${getTableHTML(data.exercises)}
                     </div>
                     ${getFooterHTML()}

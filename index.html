@@ -46,8 +46,6 @@
     <div id="root"></div>
 
     <script type="text/babel">
-        const { useState } = React;
-
         // --- V2.2 ARMOR CIRCUIT DATA ---
         const ARMOR_CIRCUIT = [
             { name: "1. Tib Raises", reps: "20 reps", focus: "Ankle/Achilles armor against turf friction." },
@@ -76,7 +74,7 @@
                 exercises: [
                     { name: "A1. Extreme Iso Lunge", sets: "1", reps: "60-90s/leg", rpe: "9", rest: "None", notes: "Primer: Active pull! Front hamstring pulls back, DRIVE BIG TOE TO FLOOR to lock glute." },
                     { name: "A2. Extreme Iso Push-Up", sets: "1", reps: "60s", rpe: "8", rest: "90s", notes: "Primer: Actively pull hands into floor. Drive big toes to floor for core tension." },
-                    { name: "B. Depth Drops (Box: ___\")", sets: "4", reps: "10", rpe: "8", rest: "60s", notes: "Absorption: Write in box height used. Land silently. Knees OUT. Drive big toes to floor." },
+                    { name: 'B. Depth Drops (Box: ___")', sets: "4", reps: "10", rpe: "8", rest: "60s", notes: "Absorption: Write in box height used. Land silently. Knees OUT. Drive big toes to floor." },
                     { name: "C1. Trap Bar Deadlift", sets: "3", reps: "2", rpe: "9", rest: "2m", notes: "Concentric: CNS is primed. Fast off the floor. DRIVE BIG TOES TO FLOOR." },
                     { name: "C2. Bottom-Up KB Press", sets: "3", reps: "5/arm", rpe: "8", rest: "2m", notes: "Armor: Supreme rotator cuff stability. Drive opposite big toe to floor to lock pelvis." }
                 ]
@@ -127,7 +125,7 @@
                 exercises: [
                     { name: "A1. Extreme Iso Lunge", sets: "1", reps: "2-3m/leg", rpe: "10", rest: "None", notes: "Primer: Pushing the limit. Maintain 90 degrees. DRIVE BIG TOE TO FLOOR." },
                     { name: "A2. Extreme Iso Push-Up", sets: "1", reps: "90s-2m", rpe: "9", rest: "2m", notes: "Primer: Max tension. Core braced, active pull into ground. Toes rooted." },
-                    { name: "B. Depth Drops (Box: ___\")", sets: "4", reps: "20", rpe: "8", rest: "90s", notes: "Absorption: High volume. Write in box height. Mimicking 17,000 match steps. Silent landing." },
+                    { name: 'B. Depth Drops (Box: ___")', sets: "4", reps: "20", rpe: "8", rest: "90s", notes: "Absorption: High volume. Write in box height. Mimicking 17,000 match steps. Silent landing." },
                     { name: "C1. Trap Bar Deadlift", sets: "3", reps: "2", rpe: "9.5", rest: "3m", notes: "Concentric: Max Force. Nervous system uninhibited. DRIVE BIG TOES TO FLOOR." },
                     { name: "C2. Heavy OH Press", sets: "3", reps: "2", rpe: "9.5", rest: "3m", notes: "Concentric: Absolute force. Drive through legs, stiff core, root the big toe." }
                 ]
@@ -142,7 +140,7 @@
                 type: "standard",
                 exercises: [
                     { name: "A. Iso Lunge w/ Curl Press", sets: "1", reps: "2m/leg", rpe: "10", rest: "2m", notes: "Primer: Brain separates upper body tasks from lower body stability. Big toe down." },
-                    { name: "B. Drop Lunges (Box: ___\")", sets: "4", reps: "5/leg", rpe: "9", rest: "60s", notes: "Absorption: Step off box into split lunge. Decelerate instantly. Root front big toe." },
+                    { name: 'B. Drop Lunges (Box: ___")', sets: "4", reps: "5/leg", rpe: "9", rest: "60s", notes: "Absorption: Step off box into split lunge. Decelerate instantly. Root front big toe." },
                     { name: "C1. Rebound Jumps", sets: "4", reps: "5", rpe: "MAX", rest: "90s", notes: "Transfer: Quick transition from eccentric stretch to concentric jump." },
                     { name: "C2. Weighted Chin Up", sets: "3", reps: "2", rpe: "9.5", rest: "90s", notes: "Concentric: Heavy pulling. Lats and biceps." },
                     { name: "D. Renegade Rows", sets: "3", reps: "8/side", rpe: "8", rest: "60s", notes: "Armor: Upper body bulletproofing for the breakdown. Drive toes to floor." }
@@ -194,7 +192,7 @@
                 exercises: [
                     { name: "A1. Extreme Iso Lunge", sets: "1", reps: "90s/leg", rpe: "9", rest: "None", notes: "Primer: GTO desensitization. Drive big toe to floor." },
                     { name: "A2. Extreme Iso Push-Up", sets: "1", reps: "60s", rpe: "8", rest: "60s", notes: "Primer: Upper body stability. Toes rooted." },
-                    { name: "B. Depth Drops (Box: ___\")", sets: "3", reps: "5", rpe: "8", rest: "60s", notes: "Absorption: Low Volume CNS Primer. Write in height used. Fast, quiet, precise." },
+                    { name: 'B. Depth Drops (Box: ___")', sets: "3", reps: "5", rpe: "8", rest: "60s", notes: "Absorption: Low Volume CNS Primer. Write in height used. Fast, quiet, precise." },
                     { name: "C1. Trap Bar Deadlift", sets: "2", reps: "2", rpe: "8.5", rest: "2m", notes: "Concentric: ~85%. Leave reps in the tank. DRIVE BIG TOES TO FLOOR." },
                     { name: "C2. Bottom-Up KB Press", sets: "2", reps: "4/arm", rpe: "8", rest: "2m", notes: "Concentric/Armor: Shoulder stability preservation. Anchor opposite toe." }
                 ]
@@ -420,24 +418,6 @@
                         </div>
 
                     </div>
-                </div>
-            );
-        };
-
-        const App = () => {
-            return (
-                <div className="pb-10">
-                    <div className="no-print bg-gray-900 text-white p-6 text-center mb-8 border-b-4 border-brand-red">
-                        <h2 className="text-2xl font-brand uppercase tracking-widest mb-1">Newman Strong V2.2 Database</h2>
-                        <p className="text-sm text-gray-400 mb-4">She-Wolf Protocol (3 Blocks: Jun/Jul, Aug, Sep/Oct) | Press CMD+P to print. Enable "Background Graphics".</p>
-                        <button onClick={() => window.print()} className="bg-brand-red hover:bg-red-700 text-white font-bold py-2 px-6 rounded transition tracking-widest uppercase text-sm">
-                            Print Protocol Book
-                        </button>
-                    </div>
-
-                    {WOLFPACK_DATA.map((session, i) => (
-                        <SheetV2 key={`wolf-${i}`} data={session} />
-                    ))}
                 </div>
             );
         };
